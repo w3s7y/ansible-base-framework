@@ -1,0 +1,10 @@
+---
+
+- name: Configure the windows hosts
+  hosts:
+    - windoze
+  roles:
+     - { role: 'nxlog',
+     pkg_state: 'present',
+     service_start_mode: 'manual',
+     service_state: 'stopped' }
